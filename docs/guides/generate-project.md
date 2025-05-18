@@ -5,5 +5,16 @@
   <=====>
 - install @nestjs/typeorm typeorm sqlite3
   <=====>
-  [Create entity](../asset/8-3%20create%20entity%20and%20repository.png)
+  ![alt text](<../asset/8-3 create entity and repository.png>)
 - [Repository pattern in nestjs](https://docs.nestjs.com/techniques/database#repository-pattern)
+- routes design
+- ![Create routes](<../asset/8-8 route design.png>)
+
+### setup body validation
+
+- follow [this](https://docs.nestjs.com/techniques/validation#auto-validation)
+- target: route `/auth/signup`
+  - change /users to /auth in user controller
+  - add validationPipe in main
+  - create dto object
+  - update route in controller
