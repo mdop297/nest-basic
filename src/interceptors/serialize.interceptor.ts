@@ -1,8 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
-import { NestInterceptor, ExecutionContext, CallHandler } from '@nestjs/common';
+import {
+  NestInterceptor,
+  ExecutionContext,
+  CallHandler,
+  UseInterceptors,
+} from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ClassConstructor, plainToClass } from 'class-transformer';
+
+export function Serialize(dto: ClassConstructor<any>) {
+  return UseInterceptors(new SerializeInterceptor(dto));
+}
 
 export class SerializeInterceptor implements NestInterceptor {
   constructor(private dto: ClassConstructor<any>) {}
