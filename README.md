@@ -25,6 +25,11 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Notable commit
+
+- EXCLUDE PASSWORD
+- INTERCEPTOR baseline
+
 ## Project setup
 
 ```bash

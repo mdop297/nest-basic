@@ -28,7 +28,6 @@ export class UsersController {
   @UseInterceptors(SerializeInterceptor)
   @Get('/:id')
   async findUser(@Param('id') id: string) {
-    console.log('2. HANDLER IS RUNNING.');
     const user = await this.userService.findOne(parseInt(id));
     if (!user) {
       throw new NotFoundException('user not found');
