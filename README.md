@@ -29,6 +29,7 @@
 
 - EXCLUDE PASSWORD
 - INTERCEPTOR baseline
+- refactor Serialize
 
 ## Project setup
 
