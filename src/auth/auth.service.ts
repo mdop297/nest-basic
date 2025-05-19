@@ -50,4 +50,8 @@ export class AuthService {
       throw new BadRequestException('Wrong password');
     }
   }
+
+  async currentUser(userId: number) {
+    return this.userService.findOne(userId);
+  }
 }
